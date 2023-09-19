@@ -6,7 +6,13 @@
 int main()
 {
     std::cout << "Hello World!\n";
-    std::cout << "Piotr Kaczor\n"
+    std::cout << "Piotr Kaczor\n";
+    std::cout << 'x'; //sta³a znakowa
+    std::cout << '\n';
+    std::cout << 82; //sta³a ca³kowitoliczbowa
+    std::cout << '\n';
+    std::cout << -2.5; //sta³a rzeczywista
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
