@@ -3,14 +3,37 @@
 
 #include <iostream>
 
+//napisz program ktory wczyta liczbe od uzytkownika i ja wyswietli na konsoli
+void task1()
+{
+    int numberFromUser;
+    std::cout << "Podaj liczbe\n";
+    std::cin >> numberFromUser;
+
+    std::cout << "Podales " << numberFromUser << "\n"
+}
+
+//program obliczjacy srednia arytmetyczna dwoch liczb
+void task2()
+{
+    int firstNumber, secondNumber;
+    std::cout << "podaj druga liczbe\n";
+        std::cin >> firstNumber;
+        std::cout << "podaj druga liczbe\n";
+        std::cin >> secondNumber;
+
+        int average
+            average = (firstNumber + secondNumber) / 2;
+
+        std::cout << "œrednia to: " << average << "\n";
+}
+
+
 int main()
 {
-    //napisz program ktory wczyta liczbe od uzytkownika i ja wyswietli na konsoli
-    std::cout << "Podaj liczbe\n";
-    int numberFromUser;
-    std::cin >> numberFromUser;
-    std::cout << "Podales " << numberFromUser << "\n";
-
+    setlocale(LC_CTYPE, "polish");
+    //task1();
+    //task2();
 
 }
 
