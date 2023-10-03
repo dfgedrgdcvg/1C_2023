@@ -60,7 +60,7 @@ void task4()
 }
 
 
-int main
+int main()
 {
     setlocale(LC_CTYPE, "polish");
     //task1();
