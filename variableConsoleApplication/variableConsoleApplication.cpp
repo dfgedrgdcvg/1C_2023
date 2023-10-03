@@ -10,7 +10,7 @@ void task1()
     std::cout << "Podaj liczbe\n";
     std::cin >> numberFromUser;
 
-    std::cout << "Podales " << numberFromUser << "\n"
+    std::cout << "Podales " << numberFromUser << "\n";
 }
 
 //program obliczjacy srednia arytmetyczna dwoch liczb
@@ -22,14 +22,45 @@ void task2()
         std::cout << "podaj druga liczbe\n";
         std::cin >> secondNumber;
 
-        int average
+        int average;
             average = (firstNumber + secondNumber) / 2;
 
         std::cout << "œrednia to: " << average << "\n";
 }
 
+//program obliczjacy pole prostokata 
 
-int main()
+void task3()
+{
+    int SideA, SideB;
+    std::cout << "podaj dlugosc boku a\n";
+    std::cin >> SideA;
+    std::cout << "podaj dlugosc boku b\n";
+    std::cin >> SideB;
+    
+    int area;
+    area = SideA * SideB;
+        std::cout << "pole wynosi" " << area << \n";
+}
+
+
+//program obliczjacy objetosc stozka 
+
+void task4()
+{
+    int ray, height;
+    std::cout << "podaj dlugosc promienia";
+    std::cin >> ray;
+    std::cout << "podaj dlugosc wysokosci";
+    std::cin >> height;
+    int volume;
+    volume = 1 / 3 * height * 3.1415 * (ray * ray);
+    std::cout << "objetosc stozka wynosi ";
+    std::cin >> volume;
+}
+
+
+int main
 {
     setlocale(LC_CTYPE, "polish");
     //task1();
