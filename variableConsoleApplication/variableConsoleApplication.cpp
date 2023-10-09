@@ -59,6 +59,47 @@ void task4()
     std::cin >> volume;
 }
 
+//program obliczajacy wartosc wyrazenia a^2 + b^2
+
+void task5()
+{
+    int a, b;
+    std::cout << "podaj wartosc a";
+    std::cin >> a;
+    std::cout << "podaj wartosc b";
+    int score;
+    score = (a * a) + (b * b);
+    std::cout << "wartosc wyrazenia a^2 + b^2 = " << score << "\n";
+}
+
+//program obliczajacy pole trojkata o podstawie b i wysokosci h
+
+void task6()
+{
+    int base_side, height;
+    std::cout << "podaj wartosc podstwy";
+    std::cin >> base_side;
+    std::cout << "podaj wartosc wysokosci";
+    std::cin >> height;
+    int area;
+    area = (base_side * height) / 2;
+    std::cout << "wartosc wyrazenia = " << area << "\n";
+}
+
+//program obliczajacy pole trapezu o podstawach a i b oraz wysokosci h
+
+void task7()
+{
+    int a, b, h;
+    std::cout << "podaj wartosc a";
+    std::cin >> a;
+    std::cout << "podaj wartosc b";
+    std::cin >> b;
+    std::cout << "podaj wartosc h";
+    std::cin >> h;
+    int area;
+    area = (a + b) * h /2
+}
 
 int main()
 {
