@@ -67,6 +67,7 @@ void task5()
     std::cout << "podaj wartosc a";
     std::cin >> a;
     std::cout << "podaj wartosc b";
+    std::cin >> b;
     int score;
     score = (a * a) + (b * b);
     std::cout << "wartosc wyrazenia a^2 + b^2 = " << score << "\n";
@@ -98,9 +99,29 @@ void task7()
     std::cout << "podaj wartosc h";
     std::cin >> h;
     int area;
-    area = (a + b) * h /2
+    area = (a + b) * h / 2;
+
 }
 
+//Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+
+void task8()
+{
+    int w1, w2, w3,mark1, mark2, mark3;
+    std::cout << "podaj wartosc pierwszej wagi ";
+    std::cin >> w1;
+    std::cout << "podaj wartosc drugiej wagi ";
+    std::cin >> w2;
+    std::cout << "podaj wartosc trzeciej wagi ";
+    std::cin >> w3;
+    std::cout << "podaj wartosc pierwszej oceny";
+    std::cin >> mark1;
+    std::cout << "podaj wartosc drugiej oceny";
+    std::cin >> mark2;
+    std::cout << "podaj wartosc trzeciej oceny";
+    std::cin >> mark3;
+    int mean;
+}
 int main()
 {
     setlocale(LC_CTYPE, "polish");
