@@ -134,7 +134,58 @@ void task6()
 	int age;
 	std::cout << "podaj wiek u¿ytkownika \n";
 	std::cin >> age;
+	if (age < 18)
+	{
+		std::cout << "osoba jest nie pe³noletnia\n";
+	}
+	else
+		std::cout << "osoba jest niepe³noletnia\n";
 }
+
+//*.Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹.Wyœwietl wynik.
+void task7()
+{
+	int theAbsoluteValue, numberFromUser;
+	std::cout << "podaj liczbe ca³kowita\n";
+	std::cin >> numberFromUser;
+
+	if (numberFromUser < 0)
+		std::cout << "wartosc bezwzgledna" << numberFromUser * -1 << "\n";
+	else
+		std::cout << "wartosc bezwzgledna" << numberFromUser << "\n";
+
+	std::cout << theAbsoluteValue;
+}
+
+//*. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
+void task8()
+{
+	int number;
+		std::cout << "podaj liczbe od 1 do 70\n";
+		if (number == 1)
+			std::cout << "poniedzia³ek\n";
+		if (number == 2)
+			std::cout << "wtorek\n";
+		if (number == 3)
+			std::cout << "œroda\n";
+		if (number == 4)
+			std::cout << "czwartek\n";
+		if (number == 5)
+			std::cout << "piatek\n";
+		if (number == 6)
+			std::cout << "sobota\n";
+		if (number == 7)
+			std::cout << "niedziela\n";
+}
+
+//*.Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
+void task9()
+{
+	int firstNumber, secondNumber;
+	std::cout << "podaj pierwsza liczbe ca³kowita\n";
+}
+
+
 
 
 int main()
@@ -148,9 +199,6 @@ int main()
 
 
 /*
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹. Wyœwietl wynik.
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
-*. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
 *. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
