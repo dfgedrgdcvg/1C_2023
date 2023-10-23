@@ -183,10 +183,59 @@ void task9()
 {
 	int firstNumber, secondNumber;
 	std::cout << "podaj pierwsza liczbe ca³kowita\n";
+	std::cin >> firstNumber;
+	std::cout << "podaj druga liczbe ca³kowita\n";
+	std::cin >> secondNumber;
+	if (firstNumber > secondNumber)
+		std::cout << "liczba 1 jest wieksza od 2\n";
+	else
+		std::cout << "2 liczba jest wieksza od 1\n";
 }
 
+//*. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
+void task10()
+{
+	int year;
+	std::cout << "podaj rok\n";
+	std::cin >> year;
+	if (year > 0 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+		std::cout << "rok jest przestêpny\n";
+	else
+		std::cout << "rok jest nieprzestepny\n";
+}
 
-
+//*. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
+void task11()
+{
+	int number;
+	std::cout << "podaj liczbe ca³kowita\n";
+	std::cin >> number;
+	if (number / 3 && number / 5)
+		std::cout << "liczba jest podzielna przez 3 i 5\n";
+	else
+		std::cout << "liczba nie jest podzielan przez 3 i 5\n";
+}
+//*. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
+/*Na  podstawie tych danych oblicz wskaŸnik BMI(Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
+poni¿ej 16 - wyg³odzenie
+16 - 16.99 - wychudzenie
+17 - 18.49 - niedowagê
+18.5 - 24.99 - wagê prawid³ow¹
+25.0 - 29.9 - nadwagê
+30.0 - 34.99 - I stopieñ oty³oœci
+35.0 - 39.99 - II stopieñ oty³oœci
+powy¿ej 40.0 - oty³oœæ skrajn¹
+Wzór :
+BMI = masa / wysokoœæ ^ 2
+*/
+void task12()
+{
+	int weight, growth , bmi;
+	std::cout << "podaj wzrost\n";
+	std::cin >> growth;
+	std::cout << "podaj wage\n";
+	std::cin >> weight;
+}
 
 int main()
 {
@@ -199,8 +248,6 @@ int main()
 
 
 /*
-*. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
 Na podstawie tych danych oblicz wskaŸnik BMI (Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
 *. Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t. Wyœwietl odpowiedni komunikat.
