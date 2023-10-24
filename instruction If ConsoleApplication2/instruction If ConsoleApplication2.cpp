@@ -231,11 +231,77 @@ BMI = masa / wysokoœæ ^ 2
 void task12()
 {
 	int weight, growth , bmi;
-	std::cout << "podaj wzrost\n";
+	std::cout << "podaj wage w kilogramach\n";
 	std::cin >> growth;
-	std::cout << "podaj wage\n";
+	std::cout << "podaj wzrost w metrach\n";
 	std::cin >> weight;
+	bmi = weight * (growth * growth);
+	if (bmi < 16)
+    std::cout << "wyg³odzenie";
+	if (bmi >= 16 && bmi <= 16.99)
+	std::cout << "wychudzenie";
+	if (bmi >= 17 && bmi <= 18.49)
+	std::cout << "niedowaga";
+	if (bmi >= 18.5 && bmi <= 24.99)
+	std::cout << "waga prawidlowa";
+	if (bmi >= 25.0 && bmi <= 29.9)
+	std::cout << "nadwaga";
+	if (bmi >= 30.0 && bmi <= 34.99)
+	std::cout << "I stopieñ oty³oœci";
+	if (bmi >= 35.0 && bmi <= 39.99)
+	std::cout << "II stopieñ oty³oœci";
+	if (bmi <= 40.0)
+	std::cout << "oty³osc skrajna";
 }
+
+//*. Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t. Wyœwietl odpowiedni komunikat.
+void task13()
+{
+	int firstNumber, secondNumber, thirdNumber;
+	std::cout << "podaj 1 odcinek";
+	std::cin >> firstNumber;
+	std::cout << "podaj 2 odcinek";
+    std::cin >> secondNumber;
+	std::cout << "podaj 3 odcinek";
+	std::cin >> thirdNumber;
+	if (firstNumber > secondNumber + thirdNumber && secondNumber > firstNumber + thirdNumber && thirdNumber > firstNumber + secondNumber)
+		std::cout << "mozna zrobic z tych odcinkow trojkat";
+	else
+		std::cout << "nie mozna zbudowac";
+}
+
+//*. Napisz program, który poprosi u¿ytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeœli jest to mo¿liwe.
+//*. Wyœwietl wynik lub odpowiedni komunikat, jeœli liczba jest ujemna.
+void task14()
+{
+	int number, root;
+	std::cout << "podaj liczbe\n";
+	std::cin >> number;
+	root = sqrt(number);
+
+	if (number > 0)
+	{
+		std::cout << "pierwiastek kwadratowy podanej liczby to: " << root;
+	}
+	else
+		std::cout << "nie da sie obliczyc pierwiastka liczby ujemnej";
+}
+
+//*. Program sprawdzaj¹cy czy podana data jest poprawna (np. sprawdzaj¹c, czy dzieñ jest z zakresu od 1 do 31, miesi¹c od 1 do 12 itd.)
+void task15()
+{
+	int dayNumber, monthNumber;
+	std::cout << "podaj dzien";
+	std::cin >> dayNumber;
+	std::cout << "podaj miesiac";
+	std::cin >> monthNumber;
+
+	if (monthNumber >= 1 && monthNumber <= 12 && dayNumber <= 1 && dayNumber <= 31)
+		std::cout << "data jest poprawna";
+	else
+		std::cout << "data nie jest poprawna";
+}
+
 
 int main()
 {
@@ -247,10 +313,3 @@ int main()
 
 
 
-/*
-*. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
-Na podstawie tych danych oblicz wskaŸnik BMI (Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
-*. Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t. Wyœwietl odpowiedni komunikat.
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeœli jest to mo¿liwe. Wyœwietl wynik lub odpowiedni komunikat, jeœli liczba jest ujemna.
-*. Program sprawdzaj¹cy czy podana data jest poprawna (np. sprawdzaj¹c, czy dzieñ jest z zakresu od 1 do 31, miesi¹c od 1 do 12 itd.)
-*/
