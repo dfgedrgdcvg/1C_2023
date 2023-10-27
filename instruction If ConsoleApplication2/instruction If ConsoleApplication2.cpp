@@ -1,6 +1,8 @@
 #include <iostream>
 
 /*
+* DRY - dont repeat yourself
+* 
 operatory warunkowe:
 > - wiêksze
 < - mniejszoœæ
@@ -160,8 +162,8 @@ void task7()
 //*. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
 void task8()
 {
-	int number;
-		std::cout << "podaj liczbe od 1 do 70\n";
+	int number , dayOfWeek;
+		std::cout << "podaj liczbe od 1 do 7\n";
 		if (number == 1)
 			std::cout << "poniedzia³ek\n";
 		if (number == 2)
@@ -176,6 +178,36 @@ void task8()
 			std::cout << "sobota\n";
 		if (number == 7)
 			std::cout << "niedziela\n";
+
+		//lub 
+
+		switch (dayOfWeek)
+		{
+		case 1:
+			std::cout << "Podniedzia³ek\n";
+			break;
+		case 2:
+			std::cout << "Wtorek\n";
+			break;
+		case 3:
+			std::cout << "Œroda\n";
+			break;
+		case 4:
+			std::cout << "Czwartek\n";
+			break;
+		case 5:
+			std::cout << "Pi¹tek\n";
+			break;
+		case 6:
+			std::cout << "Sobota\n";
+			break;
+		case 0:
+		case 7:
+			std::cout << "Niedziela\n";
+			break;
+		default:
+			std::cout << "Dzieñ niepoprawny\n";
+		}
 }
 
 //*.Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
