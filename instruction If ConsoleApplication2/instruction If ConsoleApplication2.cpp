@@ -334,6 +334,16 @@ void task15()
 		std::cout << "data nie jest poprawna";
 }
 
+//napisz program ktory ma pobrac od uzytkownika liczbe dodatnia. zabezpiecz progam przed pobraniem liczby ujemnej
+void task16()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnia";
+	std::cin >> number;
+	
+	std::cout << "liczba dodatnia pobrana od uzytkownika " << number << "\n";
+}
+
 
 int main()
 {
