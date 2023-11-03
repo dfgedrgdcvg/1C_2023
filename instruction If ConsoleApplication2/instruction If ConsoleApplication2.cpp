@@ -373,6 +373,27 @@ void task17()
 	std::cout << "Liczba dodatnia pobrana od uzytkownika " << numberFromUser << "\n";
 }
 
+//napisz program ktory ma pobrac od uzytkownika liczbe dodatnia. zabezpiecz program przezd podaniem liczby ujemnej
+void task2()
+{
+	int numberFromUser;
+
+	do
+	{
+		std::cout << "podaj liczbe dodatnia:\n";
+		std::cin >> numberFromUser;
+	} while (numberFromUser < 0);
+
+	std::cout << "liczba dodatnia pobrana przez u¿ytkownika " << numberFromUser << "\n";
+}
+
+//napisz rpgram ktory wylosuje liczbe a nastepnie uzytkownik bedzie musial ja zgadnac
+void task3()
+{
+
+}
+
+
 
 int main()
 {
