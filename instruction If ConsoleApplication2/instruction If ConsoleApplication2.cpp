@@ -46,7 +46,7 @@ void task1()
 }
 
 //napisz program ktory wyswietli informacje czy liczba jest parzysta czy nieparzysta
-void task1()
+void task2()
 {
 	int number;
 	std::cout << "Podaj liczbe : \n";
@@ -156,7 +156,7 @@ void task7()
 	else
 		std::cout << "wartosc bezwzgledna" << numberFromUser << "\n";
 
-	std::cout << theAbsoluteValue;
+	std::cout << "wartos bezwzgledna wynosi " << numberFromUser;
 }
 
 //*. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
@@ -164,19 +164,20 @@ void task8()
 {
 	int number , dayOfWeek;
 		std::cout << "podaj liczbe od 1 do 7\n";
-		if (number == 1)
+		std::cin >> dayOfWeek;
+		if (dayOfWeek == 1)
 			std::cout << "poniedzia³ek\n";
-		if (number == 2)
+		if (dayOfWeek == 2)
 			std::cout << "wtorek\n";
-		if (number == 3)
+		if (dayOfWeek == 3)
 			std::cout << "œroda\n";
-		if (number == 4)
+		if (dayOfWeek == 4)
 			std::cout << "czwartek\n";
-		if (number == 5)
+		if (dayOfWeek == 5)
 			std::cout << "piatek\n";
-		if (number == 6)
+		if (dayOfWeek == 6)
 			std::cout << "sobota\n";
-		if (number == 7)
+		if (dayOfWeek == 7)
 			std::cout << "niedziela\n";
 
 		//lub 
@@ -374,9 +375,9 @@ void task17()
 }
 
 //napisz program ktory ma pobrac od uzytkownika liczbe dodatnia. zabezpiecz program przezd podaniem liczby ujemnej
-void task2()
+void task18()
 {
-	int numberFromUser;
+	int numberFromUser , randomNumber;
 
 	do
 	{
@@ -387,17 +388,61 @@ void task2()
 	std::cout << "liczba dodatnia pobrana przez u¿ytkownika " << numberFromUser << "\n";
 }
 
-//napisz rpgram ktory wylosuje liczbe a nastepnie uzytkownik bedzie musial ja zgadnac
-void task3()
+//napisz program ktory wylosuje liczbe a nastepnie uzytkownik bedzie musial ja zgadnac
+void task19()
 {
+	int numberFromUser;
+	const int LOWER_RANGE = 7;
+	const int UPPER_RANGE = 15;
+	srand(time(NULL));
+	int randomNumber = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+	//std::cout << randomNumber << "\n";
+	do
+	{
+		std::cout << "podaj liczbe:\n";
+		std::cin >> numberFromUser;
+	} while (numberFromUser != randomNumber);
 
+	std::cout << "GRATULACJE!!!!!!!!!!!";
 }
 
+//napisz program wyswietlajacy liczby calkowite z przdzialu <1, x>. Gdzie x podaje uzytkownik.
+void task20()
+{
+	//std::cout << "1, 2, 3, 4, 5, 6 \n ";
+	unsigned long long upperRange;
+	std::cout << "podaj zakres wiekszy badz rowny 1\n";
+	std::cin >> upperRange;
 
+	/*
+	std::cout << "1, ";
+	if (upperRange >1)
+	{
+	std::cout << "2, ";
+	if(upperRange >2 )
+	{
+	std::cout << "3, ";
+	if (upperRange >3)
+	{
+	std::cout << "4, ";
+	//......
+	}
+	}
+	}
+
+	*/
+
+	unsigned long long currentnumber = 0;
+	do
+	{
+		currentnumber = currentnumber + 1;
+		std::cout << currentnumber << ", ";
+	} while (upperRange > currentnumber);
+ }
 
 int main()
 {
-	task1();
+	task19();
 }
 
 
