@@ -435,10 +435,14 @@ void task20()
 	unsigned long long currentnumber = 0;
 	do
 	{
-		currentnumber = currentnumber + 1;
+		//currentnumber = currentnumber + 1;
+		//currentnumber += 1;
+		//currentnumber++;
+		++currentnumber;
 		std::cout << currentnumber << ", ";
 	} while (upperRange > currentnumber);
  }
+
 
 int main()
 {
