@@ -433,15 +433,36 @@ void task20()
 	*/
 
 	unsigned long long currentnumber = 0;
+
+	std::cout << "podaj liczbe > 1: ";
+	std::cin >> upperRange;
 	do
 	{
+		currentnumber++;
 		//currentnumber = currentnumber + 1;
 		//currentnumber += 1;
-		//currentnumber++;
-		++currentnumber;
+		//++currentnumber;
 		std::cout << currentnumber << ", ";
 	} while (upperRange > currentnumber);
  }
+
+//prog ktory policzy sume cyfr podanej przez uzytkownika
+void task21()
+{
+	int number;
+	std::cout << "podaj liczbe\n";
+	std::cin >> number;
+
+	int sum = 0;
+	int rest;
+
+	rest = number % 10;
+	sum = sum + rest;
+	number = number / 10;  //2
+		
+
+	//125
+}
 
 
 int main()
