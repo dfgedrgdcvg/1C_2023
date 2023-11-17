@@ -464,6 +464,69 @@ void task21()
 	//125
 }
 
+//* Poproœ u¿ytkownika o podawanie liczb, a¿ wprowadzi zero. 
+//Oblicz sumê oraz œredni¹ arytmetyczn¹ wprowadzonych liczb.
+void task22()
+{
+	int number;
+	int sum = 0;
+	int numberOfNumbers = 0;
+
+	/*
+	std::cout << "Podaj liczbê:\n";
+	std::cin >> number;
+	sum = sum + number;
+	numberOfNumbers++;
+	if (number != 0)
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+		sum = sum + number;
+		numberOfNumbers++;
+		if (number != 0)
+		{
+			std::cout << "Podaj liczbê:\n";
+			std::cin >> number;
+			sum = sum + number;
+			numberOfNumbers++;
+			//if ...
+		}
+	}
+	*/
+
+	do
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+		sum = sum + number;
+		//if (number != 0)
+		numberOfNumbers++;
+	} while (number != 0);
+
+	//numberOfNumbers--;
+	std::cout << "Suma liczb wynosi " << sum << "\n";
+	double avg = sum * 1.0 / numberOfNumbers;
+	std::cout << "Œrednia " << avg << "\n";
+}
+
+
+
+//Napisz program, który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej. 
+//Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr.
+void task23()
+{
+	int number;
+
+	std::cout << "Podaj liczbê\n";
+	std::cin >> number;
+	/*
+	rest = number % 10;
+	std::cout << rest << ", ";
+	number = number / 10;
+
+	*/
+}
+
 
 int main()
 {
