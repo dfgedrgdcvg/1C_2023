@@ -515,22 +515,26 @@ void task22()
 //Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr.
 void task23()
 {
-	int number;
+	long long num, rest;
+	long long numberOfUsers = 0;
+	std::cout << "podaj liczbe: ";
+	std::cin >> num;
 
-	std::cout << "Podaj liczbê\n";
-	std::cin >> number;
-	/*
-	rest = number % 10;
-	std::cout << rest << ", ";
-	number = number / 10;
+	do
+	{
+		numberOfUsers++;
+		rest = num % 10;
+		num = num / 10;
+	} while (num != 0);
+	std::cout << "liczba liczb = " << numberOfUsers << "\n";
 
-	*/
+
 }
 
 
 int main()
 {
-	task19();
+	task23();
 }
 
 
