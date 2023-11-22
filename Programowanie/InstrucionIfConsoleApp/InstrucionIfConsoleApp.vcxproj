@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3a88d6c5-fba4-49af-b0c0-5c7709cf594e}</ProjectGuid>
-    <RootNamespace>FestConsoleApplication</RootNamespace>
+    <ProjectGuid>{5795c688-654b-46be-bad3-a3f0db1874ef}</ProjectGuid>
+    <RootNamespace>InstrucionIfConsoleApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FestConsoleApplication.cpp" />
+    <ClCompile Include="InstrucionIfConsoleApp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
