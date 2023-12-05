@@ -137,8 +137,38 @@ void task3()
 		std::cout << "Liczba nie jest palindromem\n";
 }
 
+//napisz program, ktory wyswietli "Hello World" tyle razy ile chce uzytkownik
+void task4()
+{
+	int howManyTimes;
+	std::cout << "ile razy wypisac Hello World: ";
+	std::cin >> howManyTimes;
+
+	int i = 0;
+	while (i != howManyTimes)
+	{
+		std::cout << "Hello World\n";
+		i++;
+	}
+}
+
+//napisz program ktory wyswietli liczb parzyste do podanej przez uzytkownika liczby
+void task5()
+{
+	int upperRange;
+	std::cout << "podaj górna granice do wyswietlenia\n";
+	std::cin >> upperRange;
+
+	int i = 0;
+	while (i <= upperRange)
+	{
+		std::cout << i << "\n";
+		i += 2;
+	}
+		
+}
 
 int main()
 {
-	task3();
+	task4();
 }
