@@ -4,7 +4,7 @@
 * 
 * 
 * 
-* 
+* Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym.Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
 * Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
 * Program wyci¹gaj¹cy informacje z numeru PESEL
 * Program implementuj¹cy algorytm szyfrowania Cezara (proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
@@ -136,8 +136,8 @@ void task7()
     std::cout << "w tym ciagu jest " << numberOfVowel << "samog³soki i " << numberOfConsonant << " spolgloski\n";
 }
 
-//Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym.
-//Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
+//Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem 
+//(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
 void task8()
 {
     int numFromUser;
@@ -145,13 +145,11 @@ void task8()
     std::string numberInBin = "";
     std::cout << "podaj liczbe: ";
     std::cin >> numFromUser;
-    tmpNum = numFromUser;
-
     
+
 }
 
-//Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem 
-//(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+
 void task9()
 {
 
