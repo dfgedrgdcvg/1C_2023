@@ -140,19 +140,54 @@ void task7()
 //(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
 void task8()
 {
-    int numFromUser;
-    int tmpNum;
-    std::string numberInBin = "";
-    std::cout << "podaj liczbe: ";
-    std::cin >> numFromUser;
-    
+    std::string textFromUser;
+    std::cout << "Podaj tekst\n";
+    std::cin >> textFromUser;
 
+    //wersja 1
+    std::string reverseText = "";
+    for (int i = textFromUser.length() - 1; i >= 0; i--)
+    {
+        reverseText = reverseText + textFromUser[i];
+    }
+
+    /*for (int i = 0; i < textFromUser.length(); i++)
+    {
+        reverseText = textFromUser[i] + reverseText;
+    }*/
+
+    if (textFromUser == reverseText)
+        std::cout << "Ten tekst jest palindromem\n";
+    else
+        std::cout << "Ten tekst nie jest palindromem\n";
+
+    //wersja 2
+    bool isPalindrome = true;
+
+    for (int signFromBegining = 0, signFormEnd = textFromUser.length() - 1; signFromBegining < signFormEnd; signFromBegining++, signFormEnd--)
+    {
+        if (textFromUser[signFromBegining] != textFromUser[signFormEnd])
+        {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if (isPalindrome /*== true*/)
+        std::cout << "Ten tekst jest palindromem\n";
+    else
+        std::cout << "Ten tekst nie jest palindromem\n";
 }
 
 
 void task9()
 {
-
+    std::string firstText;
+    std::string secondText;
+    std::cout << "podaj 1 ciag: ";
+    std::cin >> firstText;
+    std::cout << "podaj 2 ciag: ";
+    std::cin >> firstText;
 }
 
 int main()
