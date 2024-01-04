@@ -179,7 +179,8 @@ void task8()
         std::cout << "Ten tekst nie jest palindromem\n";
 }
 
-
+//Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami 
+//(czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
 void task9()
 {
     std::string firstText;
@@ -188,6 +189,41 @@ void task9()
     std::cin >> firstText;
     std::cout << "podaj 2 ciag: ";
     std::cin >> firstText;
+
+    
+}
+//Program implementuj¹cy algorytm szyfrowania Cezara(proste szyfrowanie, w którym ka¿dy 
+//znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
+void task10()
+{
+    std::string text;
+    std::cout << "podaj ciag";
+    std::cin >> text;
+
+    for (int i = 0; i < text.length(); i++)
+    {
+        text[i] += 3;
+    }
+    std::cout << text;
+}
+
+//Program wyci¹gaj¹cy informacje z numeru PESEL
+void task11()
+{
+    std::string pesel;
+    std::string year;
+    std::string month;
+    std::string day;
+
+    std::cout << "podaj pesel: ";
+    std::cin >> pesel;
+
+    if (pesel.length() == 11)
+    {
+
+    }
+
+
 }
 
 int main()
