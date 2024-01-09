@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 kolekcje", "03 kolekcje"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CharacteresConsoleApplication1", "CharacteresConsoleApplication1\CharacteresConsoleApplication1.vcxproj", "{D2408C89-1204-4C7A-AB80-9F80463B7D5D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayConsoleApplication", "ArrayConsoleApplication\ArrayConsoleApplication.vcxproj", "{70F4FB5C-7565-437A-9291-916ACAE5C1F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -87,6 +89,14 @@ Global
 		{D2408C89-1204-4C7A-AB80-9F80463B7D5D}.Release|x64.Build.0 = Release|x64
 		{D2408C89-1204-4C7A-AB80-9F80463B7D5D}.Release|x86.ActiveCfg = Release|Win32
 		{D2408C89-1204-4C7A-AB80-9F80463B7D5D}.Release|x86.Build.0 = Release|Win32
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Debug|x64.ActiveCfg = Debug|x64
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Debug|x64.Build.0 = Debug|x64
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Debug|x86.ActiveCfg = Debug|Win32
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Debug|x86.Build.0 = Debug|Win32
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Release|x64.ActiveCfg = Release|x64
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Release|x64.Build.0 = Release|x64
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Release|x86.ActiveCfg = Release|Win32
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +109,7 @@ Global
 		{E08820F5-5636-4BD9-9675-55087361CF68} = {68543FF1-D100-4D0E-9540-42CD69F84F09}
 		{473EE934-5A77-4FAD-920E-9362B7077BB7} = {68543FF1-D100-4D0E-9540-42CD69F84F09}
 		{D2408C89-1204-4C7A-AB80-9F80463B7D5D} = {337C5862-B890-47F7-8C7A-9B82E4C4118C}
+		{70F4FB5C-7565-437A-9291-916ACAE5C1F5} = {337C5862-B890-47F7-8C7A-9B82E4C4118C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC52CA19-2E71-4B24-A22D-395CD0BC76FD}
