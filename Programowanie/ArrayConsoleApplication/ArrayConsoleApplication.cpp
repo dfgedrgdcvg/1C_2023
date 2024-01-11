@@ -43,7 +43,7 @@ void task2()
 		sum = sum + numbers[i];
 	}
 	double avg = sum * 1.0 / ARRAY_SIZE;
-	std::cout << "Œrednia wynosi: " << avg << "\n";
+	std::cout << "srednia wynosi: " << avg << "\n";
 }
 
 int main()
