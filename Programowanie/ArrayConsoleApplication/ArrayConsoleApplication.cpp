@@ -70,6 +70,14 @@ void task3()
             max = numbers[i];
     }
     std::cout << "Maks wynosi: " << max << "\n";
+
+    int min = numbers[0];
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        if (numbers[i] < min)
+            min = numbers[i];
+    }
+    std::cout << "Min wynosi: " << min << "\n";
 }
 
 
