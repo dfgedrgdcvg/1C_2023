@@ -1,4 +1,4 @@
-v//01000001 01110010 01110100 01110101 01110010 01001011
+//01000001 01110010 01110100 01110101 01110010 01001011
 #include <iostream>
 #include <cmath>
 
@@ -526,6 +526,7 @@ void task19()
 
 	std::cout << "Najwiêksza wartoœæ to: " << max << "\n";
 }
+
 
 
 int main()
