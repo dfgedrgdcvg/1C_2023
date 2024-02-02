@@ -59,6 +59,13 @@ void task6_GetNumber(int& number)
     std::cin >> number;
 }
 
+int sumOfNumbers(int fn, int sn)
+{
+    int s;
+    s = fn + sn;
+    return s;
+}
+
 
 int main()
 {
@@ -87,10 +94,18 @@ int main()
     std::cout << "zmienna number w funkcji main: " << number << "\n";
     //task5(9); //blad - przez parametr mozna przekazac tylko zmienna.
     //task5(NUMBER); //blad - przez parametr mozna przekazac tylko zmienna.
-    */
+    
 
     int numberFromUser = 5;
     task6_GetNumber(numberFromUser);
     std::cout << "U¿ytkownik podaj liczbe " << numberFromUser << "\n";
+    */
+
+    int numberFromUser = 16;
+    int firstNumber, secondNumber, sum;
+    firstNumber = 9;
+    secondNumber = 1;
+    sum = sumOfNumbers(firstNumber, secondNumber);
+    std::cout << sum << "\n";
 }
 
