@@ -1,103 +1,130 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
-
 /*
 Zadanie: Tworzenie prostego kalkulatora
-Napisz program, który bêdzie dzia³a³ jako prosty kalkulator
-i bêdzie umo¿liwia³ u¿ytkownikowi wykonywanie
-Napisz program, który bêdzie dzia³a³ jako prosty kalkulator
-i bêdzie umo¿liwia³ u¿ytkownikowi wykonywanie
-podstawowych operacji arytmetycznych na dwóch liczbach.
+
+Napisz program, ktÃ³ry bÄ™dzie dziaÅ‚aÅ‚ jako prosty kalkulator
+i bÄ™dzie umoÅ¼liwiaÅ‚ uÅ¼ytkownikowi wykonywanie
+podstawowych operacji arytmetycznych na dwÃ³ch liczbach.
+
 Instrukcje:
-@@ -22,15 +23,192 @@ Prosty Kalkulator
+
+PoproÅ› uÅ¼ytkownika o podanie dwÃ³ch liczb oraz wybÃ³r operacji (dodawanie, odejmowanie, mnoÅ¼enie lub dzielenie).
+W zaleÅ¼noÅ›ci od wyboru uÅ¼ytkownika, wykonaj odpowiedniÄ… operacjÄ™ arytmetycznÄ….
+WyÅ›wietl wynik operacji.
+PrzykÅ‚adowe dziaÅ‚anie programu:
+
+Prosty Kalkulator
+-----------------
+1. Dodawanie
 2. Odejmowanie
-3. Mno¿enie
+3. MnoÅ¼enie
 4. Dzielenie
 0. Koniec programu
-Wybierz operacjê (1/2/3/4): 3
-Wybierz operacjê: 3
-Podaj pierwsz¹ liczbê: 5
-Podaj drug¹ liczbê: 3
-Wynik mno¿enia: 15
+
+Wybierz operacjÄ™: 3
+Podaj pierwszÄ… liczbÄ™: 5
+Podaj drugÄ… liczbÄ™: 3
+
+Wynik mnoÅ¼enia: 15
 */
 
 /*
 ZADANIE
 Konwersja temperatury
 
-Napisz program, który bêdzie konwertowaæ temperaturê pomiêdzy skalami: Celsiusza, Fahrenheita i Kelvina.
+Napisz program, ktÃ³ry bÄ™dzie konwertowaÄ‡ temperaturÄ™ pomiÄ™dzy skalami: Celsiusza, Fahrenheita i Kelvina.
+
 Instrukcje:
 
-Poproœ u¿ytkownika o wybór jednostki, z której chce dokonaæ konwersji (C - Celsiusz, F - Fahrenheit, K - Kelvin).
-Poproœ u¿ytkownika o podanie temperatury w wybranej jednostce.
-Przelicz temperaturê na pozosta³e jednostki (z wykorzystaniem odpowiednich wzorów konwersji).
-Wyœwietl przeliczone temperatury.
-Przyk³adowe dzia³anie programu:
+PoproÅ› uÅ¼ytkownika o wybÃ³r jednostki, z ktÃ³rej chce dokonaÄ‡ konwersji (C - Celsiusz, F - Fahrenheit, K - Kelvin).
+PoproÅ› uÅ¼ytkownika o podanie temperatury w wybranej jednostce.
+Przelicz temperaturÄ™ na pozostaÅ‚e jednostki (z wykorzystaniem odpowiednich wzorÃ³w konwersji).
+WyÅ›wietl przeliczone temperatury.
+PrzykÅ‚adowe dziaÅ‚anie programu:
 
 Konwerter Temperatur
 ---------------------
-Wybierz jednostkê temperatury:
+Wybierz jednostkÄ™ temperatury:
 1. Celsiusz (C)
 2. Fahrenheit (F)
 3. Kelvin (K)
-Wybór: C
+WybÃ³r: C
 
-Podaj temperaturê w stopniach Celsiusza: 25
+Podaj temperaturÄ™ w stopniach Celsiusza: 25
 
 Przeliczona temperatura:
-Fahrenheit: 77.0 °F
+Fahrenheit: 77.0 Â°F
 Kelvin: 298.15 K
 */
 
 /*
 ZADANIE
-Symulator rzutu kostk¹
-Napisz program, który bêdzie symulowa³ rzut kostk¹. Program powinien umo¿liwiaæ u¿ytkownikowi wybór rodzaju kostki (np. 6-œcienna, 10-œcienna, 20-œcienna) oraz iloœæ rzutów. Po wykonaniu rzutów, program powinien wyœwietliæ wyniki oraz sumê otrzymanych wartoœci.
+Symulator rzutu kostkÄ…
+
+Napisz program, ktÃ³ry bÄ™dzie symulowaÅ‚ rzut kostkÄ…. Program powinien umoÅ¼liwiaÄ‡ uÅ¼ytkownikowi wybÃ³r rodzaju kostki (np. 6-Å›cienna, 10-Å›cienna, 20-Å›cienna) oraz iloÅ›Ä‡ rzutÃ³w. Po wykonaniu rzutÃ³w, program powinien wyÅ›wietliÄ‡ wyniki oraz sumÄ™ otrzymanych wartoÅ›ci.
+
 Instrukcje:
-Poproœ u¿ytkownika o wybór rodzaju kostki (np. 6-œcienna, 10-œcienna, 20-œcienna).
-Poproœ u¿ytkownika o podanie iloœci rzutów.
-Wykonaj podan¹ liczbê rzutów wybranej kostk¹, zapisuj¹c wyniki.
-Wyœwietl otrzymane wyniki oraz sumê otrzymanych wartoœci.
-Przyk³adowe dzia³anie programu:
-Symulator rzutu kostk¹
+
+PoproÅ› uÅ¼ytkownika o wybÃ³r rodzaju kostki (np. 6-Å›cienna, 10-Å›cienna, 20-Å›cienna).
+PoproÅ› uÅ¼ytkownika o podanie iloÅ›ci rzutÃ³w.
+Wykonaj podanÄ… liczbÄ™ rzutÃ³w wybranej kostkÄ…, zapisujÄ…c wyniki.
+WyÅ›wietl otrzymane wyniki oraz sumÄ™ otrzymanych wartoÅ›ci.
+PrzykÅ‚adowe dziaÅ‚anie programu:
+
+Symulator rzutu kostkÄ…
 -----------------------
+
 Wybierz rodzaj kostki (6/10/20): 10
-Ile rzutów chcesz wykonaæ?: 5
-Wyniki rzutów kostk¹ 10-œcienn¹:
+Ile rzutÃ³w chcesz wykonaÄ‡?: 5
+
+Wyniki rzutÃ³w kostkÄ… 10-Å›ciennÄ…:
 1. Rzut 1: 7
 2. Rzut 2: 3
 3. Rzut 3: 10
 4. Rzut 4: 5
 5. Rzut 5: 8
-Suma wyników: 33
+
+Suma wynikÃ³w: 33
+
 */
 
 /*
 ZADANIE
 Konwerter jednostek
-Napisz program konwertuj¹cy jednostki miar. Program powinien umo¿liwiaæ konwersjê miêdzy ró¿nymi jednostkami (np. metry na centymetry, kilogramy na funty) oraz obs³ugiwaæ ró¿ne typy jednostek.
+
+Napisz program konwertujÄ…cy jednostki miar. Program powinien umoÅ¼liwiaÄ‡ konwersjÄ™ miÄ™dzy rÃ³Å¼nymi jednostkami (np. metry na centymetry, kilogramy na funty) oraz obsÅ‚ugiwaÄ‡ rÃ³Å¼ne typy jednostek.
+
 Instrukcje:
-Zdefiniuj zestaw jednostek, które chcesz obs³ugiwaæ (np. d³ugoœæ: metry, centymetry, cale; masa: kilogramy, funty).
-Poproœ u¿ytkownika o wybór jednostki wejœciowej i jednostki wyjœciowej oraz podanie wartoœci do konwersji.
-Przekonwertuj wartoœæ z jednostki wejœciowej na jednostkê wyjœciow¹ na podstawie ustalonego wspó³czynnika konwersji.
-Wyœwietl wynik konwersji.
-Przyk³adowe dzia³anie programu:
+
+Zdefiniuj zestaw jednostek, ktÃ³re chcesz obsÅ‚ugiwaÄ‡ (np. dÅ‚ugoÅ›Ä‡: metry, centymetry, cale; masa: kilogramy, funty).
+PoproÅ› uÅ¼ytkownika o wybÃ³r jednostki wejÅ›ciowej i jednostki wyjÅ›ciowej oraz podanie wartoÅ›ci do konwersji.
+Przekonwertuj wartoÅ›Ä‡ z jednostki wejÅ›ciowej na jednostkÄ™ wyjÅ›ciowÄ… na podstawie ustalonego wspÃ³Å‚czynnika konwersji.
+WyÅ›wietl wynik konwersji.
+PrzykÅ‚adowe dziaÅ‚anie programu:
+
 Konwerter jednostek
 -------------------
-Wybierz jednostkê wejœciow¹:
+
+Wybierz jednostkÄ™ wejÅ›ciowÄ…:
 1. Metry
 2. Centymetry
 3. Cale
-Wybór: 1
-Wybierz jednostkê wyjœciow¹:
+WybÃ³r: 1
+
+Wybierz jednostkÄ™ wyjÅ›ciowÄ…:
 1. Metry
 2. Centymetry
 3. Cale
-Wybór: 2
-Podaj wartoœæ do konwersji: 5
-Wynik konwersji: 500 centymetrów
+WybÃ³r: 2
+
+Podaj wartoÅ›Ä‡ do konwersji: 5
+
+Wynik konwersji: 500 centymetrÃ³w
+
 */
 
+//Zad 1
 void showMenu()
 {
 	system("cls");
@@ -105,7 +132,7 @@ void showMenu()
 	std::cout << "-----------------\n";
 	std::cout << "1. Dodawanie\n";
 	std::cout << "2. Odejmowanie\n";
-	std::cout << "3. Mno¿enie\n";
+	std::cout << "3. MnoÅ¼enie\n";
 	std::cout << "4. Dzielenie\n";
 	std::cout << "0. Koniec programu\n";
 }
@@ -153,7 +180,7 @@ void calculate(int choice, int firstNumber, int secondNumber)
 		if (secondNumber != 0)
 			std::cout << "Wynik operacji: " << firstNumber / secondNumber << "\n";
 		else
-			std::cout << "Nie mo¿na dzieliæ przez zero\n";
+			std::cout << "Nie moÅ¼na dzieliÄ‡ przez zero\n";
 		break;
 	default:
 		break;
@@ -166,70 +193,266 @@ void task1()
 	{
 		showMenu();
 
-		int choice = getNumber("Wybierz operacjê:\n");
+		int choice = getNumber("Wybierz operacjÄ™:\n");
 
 		if (choice == 0)
 			break;
 
-		int firstNumber = getNumber("Podaj pierwsz¹ liczbê:\n");
-		int secondNumber = getNumber("Podaj drug¹ liczbê:\n");
+		int firstNumber = getNumber("Podaj pierwszÄ… liczbÄ™:\n");
+		int secondNumber = getNumber("Podaj drugÄ… liczbÄ™:\n");
 
 		calculate(choice, firstNumber, secondNumber);
 		system("pause");
 	}
 }
 
-//Zad.2
-
+//Zad2
 void showMenuTemperature()
 {
 	system("cls");
-	std::cout << "Konwerter temperatur\n";
-	std::cout << "--------------------\n";
+	std::cout << "Konwerter Temperatur\n";
+	std::cout << "-----------------\n";
 	std::cout << "1. Celsiusz (C)\n";
 	std::cout << "2. Fahrenheit (F)\n";
 	std::cout << "3. Kelvin (K)\n";
-	std::cout << "0. koniec programu\n";
+	std::cout << "0. Koniec programu\n";
 }
 
-float conversation(float value, int whatUnit)
+void conversion(float value, int whatUnit)
 {
 	float valueInCelsiusz;
 	float valueInFahrenheit;
 	float valueInKelvin;
 	if (whatUnit == 1)
 	{
-		valueInFahrenheit;
+		valueInFahrenheit = (value * 1.8) + 32;
+		valueInKelvin = value + 273.15;
+
+		std::cout << "Przeliczona temperatura: \n";
+		std::cout << "Fahrenheit: " << valueInFahrenheit << "Â°F\n";
+		std::cout << "Kelvin: " << valueInKelvin << "K\n";
+	}
+	else if (whatUnit == 2)
+	{
+		valueInCelsiusz = (value - 32) / 1.8;
+		valueInKelvin = (value + 459.67) * 5 / 9;
+
+		std::cout << "Przeliczona temperatura: \n";
+		std::cout << "Celsiusz: " << valueInCelsiusz << "Â°C\n";
+		std::cout << "Kelvin: " << valueInKelvin << "K\n";
+	}
+	else if (whatUnit == 3)
+	{
+		valueInCelsiusz = value - 273.15;
+		valueInFahrenheit = (value - 273.15) * 1.8 + 32;
+
+		std::cout << "Przeliczona temperatura: \n";
+		std::cout << "Celsiusz: " << valueInCelsiusz << "Â°C\n";
+		std::cout << "Fahrenheit: " << valueInFahrenheit << "Â°F\n";
 	}
 }
 
-
-
 void task2()
 {
-	showMenuTemperature();
+	while (true)
+	{
+		showMenuTemperature();
 
-	int whatUnit;
-	std::cout << "Wybór: ";
-	std::cin >> whatUnit;
+		int whatUnit;
+		std::cout << "WybÃ³r: ";
+		std::cin >> whatUnit;
 
-	float valueBeforeConversation;
-	 
+		float valueBeforeConversion;
 
+		if (whatUnit == 1)
+		{
+			std::cout << "Podaj temperaturÄ™ w stopniach Celsiusza: ";
+			std::cin >> valueBeforeConversion;
+		}
+		else if (whatUnit == 2)
+		{
+			std::cout << "Podaj temperaturÄ™ w stopniach Fahrenheit: ";
+			std::cin >> valueBeforeConversion;
+		}
+		else if (whatUnit == 3)
+		{
+			std::cout << "Podaj temperaturÄ™ w stopniach Kelvin: ";
+			std::cin >> valueBeforeConversion;
+		}
+		else if (whatUnit == 0)
+			break;
+		else
+		{
+			std::cout << "Nie ma takiej opcji\n";
+			system("pause");
+			continue;
+		}
+
+		// blad przy wartosci innej niz float dla valueBeforeConversion
+		std::cout << std::endl;
+		conversion(valueBeforeConversion, whatUnit);
+		std::cout << std::endl;
+		system("pause");
+	}
+}
+
+//Zad3
+void showMenuCube()
+{
+	system("cls");
+	std::cout << "Symulator rzutu kostkÄ…\n";
+	std::cout << "-----------------\n";
+	std::cout << "\n";
+	std::cout << "Wybierz rodzaj kostki (6/10/20): \n";
+}
+
+void throwCube(short typeOfCube, short howManyThrows)
+{
+	srand(time(NULL));
+
+	std::cout << "Wyniki rzutÃ³w kostkÄ… 10-Å›ciennÄ…:\n";
+
+	short drawnNumber;
+	for (int i = 1; i < howManyThrows + 1; i++)
+	{
+		drawnNumber = rand() % (typeOfCube - 1 + 1) + 1;
+		std::cout << "Rzut " << i << ": " << drawnNumber << "\n";
+	}
+	std::cout << "\n";
+	system("pause");
+}
+
+void task3()
+{
+	while (true)
+	{
+		showMenuCube();
+
+		short typeOfCube;
+		std::cin >> typeOfCube;
+
+		std::cout << "Ile rzutÃ³w chcesz wykonaÄ‡?: \n";
+
+		short howManyThrows;
+		std::cin >> howManyThrows;
+
+		if (typeOfCube == 6)
+		{
+			throwCube(typeOfCube, howManyThrows);
+		}
+		else if (typeOfCube == 10)
+		{
+			throwCube(typeOfCube, howManyThrows);
+		}
+		else if (typeOfCube == 20)
+		{
+			throwCube(typeOfCube, howManyThrows);
+		}
+		else
+		{
+			std::cout << "ZÅ‚y wybÃ³r!";
+			system("pause");
+			continue;
+		}
+		break;
+	}
+}
+
+//Zad4
+void showMenuConverter()
+{
+	system("cls");
+	std::cout << "Konwerter jednostek\n";
+	std::cout << "-----------------\n";
+	std::cout << "\n";
+	std::cout << "Wybierz jednostkÄ™ wejÅ›ciowÄ…:\n";
+	std::cout << "1. Metry\n";
+	std::cout << "2. Centymetry\n";
+	std::cout << "3. Cale\n";
+	std::cout << "\n";
+}
+
+double convertUnit(short fromWhichUnit, short toWhichUnit, double value)
+{
+	double valueAfterConv;
+	if (fromWhichUnit == 1)
+	{
+		if (toWhichUnit == 1)
+			return valueAfterConv = value;
+		if (toWhichUnit == 2)
+			return valueAfterConv = value * 100;
+		if (toWhichUnit == 3)
+			return valueAfterConv = value * 39.37;
+	}
+	else if (fromWhichUnit == 2)
+	{
+		if (toWhichUnit == 1)
+			return valueAfterConv = value * 0.01;
+		if (toWhichUnit == 2)
+			return valueAfterConv = value;
+		if (toWhichUnit == 3)
+			return valueAfterConv = value * 0.39;
+	}
+	else if (fromWhichUnit == 3)
+	{
+		if (toWhichUnit == 1)
+			return valueAfterConv = value * 0.01;
+		if (toWhichUnit == 2)
+			return valueAfterConv = value * 2.54;
+		if (toWhichUnit == 3)
+			return valueAfterConv = value;
+	}
+}
+
+void task4()
+{
+	while (true)
+	{
+		showMenuConverter();
+
+		short fromWhichUnit;
+		std::cout << "WybÃ³r: ";
+		std::cin >> fromWhichUnit;
+
+		std::cout << "Wybierz jednostkÄ™ wyjÅ›ciowÄ…:\n";
+		std::cout << "1. Metry\n";
+		std::cout << "2. Centymetry\n";
+		std::cout << "3. Cale\n";
+
+		short toWhichUnit;
+		std::cout << "WybÃ³r: ";
+		std::cin >> toWhichUnit;
+
+		std::cout << "\n";
+
+		double value;
+		std::cout << "WartoÅ›Ä‡: ";
+		std::cin >> value;
+
+		switch (fromWhichUnit, toWhichUnit)
+		{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+
+		default:
+			std::cout << "ZÅ‚y wybÃ³r!\n";
+			system("pause");
+			continue;
+		}
+
+		std::cout << "Wynik konwersji: " << convertUnit(fromWhichUnit, toWhichUnit, value) << "\n";
+		system("pause");
+		break;
+	}
 }
 
 int main()
 {
+	setlocale(LC_CTYPE, "polish");
 
-	task1();
+	task4();
 }
-    
-
-
-
-
-int main()
-{
-    std::cout << "Hello World!\n";
-}
-
