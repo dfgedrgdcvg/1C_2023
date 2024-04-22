@@ -21,6 +21,7 @@ void showConsoleCursor(bool showFlag)
 	SetConsoleCursorInfo(out, &cursorInfo);
 }
 
+
 void getConsolResolution(int& consoleWidth, int& consoleHeight)
 {
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
@@ -48,6 +49,8 @@ void task1()
 		setCursor(x, y);
 		std::cout << "*";
 		Sleep(500);
+		setCursor(x, y);
+		std::cout << " ";
 	}
 }
 
