@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnakeConsoleApplication", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyConsoleApplication", "TaskConsoleApplication\TaskConsoleApplication.vcxproj", "{286269FB-0A19-4537-B16F-DD441414A0A3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SquareConsoleApplication", "SquareConsoleApplication\SquareConsoleApplication.vcxproj", "{D04E4A76-4789-4C32-82CE-AE8496CB6E59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -153,6 +155,14 @@ Global
 		{286269FB-0A19-4537-B16F-DD441414A0A3}.Release|x64.Build.0 = Release|x64
 		{286269FB-0A19-4537-B16F-DD441414A0A3}.Release|x86.ActiveCfg = Release|Win32
 		{286269FB-0A19-4537-B16F-DD441414A0A3}.Release|x86.Build.0 = Release|Win32
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Debug|x64.ActiveCfg = Debug|x64
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Debug|x64.Build.0 = Debug|x64
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Debug|x86.ActiveCfg = Debug|Win32
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Debug|x86.Build.0 = Debug|Win32
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Release|x64.ActiveCfg = Release|x64
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Release|x64.Build.0 = Release|x64
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Release|x86.ActiveCfg = Release|Win32
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -171,6 +181,7 @@ Global
 		{D9EE5204-3F2A-4D34-9486-021B136B2912} = {7DB6C772-728E-41A0-8F97-116DECD08154}
 		{D77430FC-E879-4CFD-9817-E9911834A2D6} = {7DB6C772-728E-41A0-8F97-116DECD08154}
 		{286269FB-0A19-4537-B16F-DD441414A0A3} = {7DB6C772-728E-41A0-8F97-116DECD08154}
+		{D04E4A76-4789-4C32-82CE-AE8496CB6E59} = {7DB6C772-728E-41A0-8F97-116DECD08154}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC52CA19-2E71-4B24-A22D-395CD0BC76FD}
