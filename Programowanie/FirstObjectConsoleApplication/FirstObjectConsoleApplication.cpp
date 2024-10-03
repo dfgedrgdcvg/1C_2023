@@ -1,10 +1,17 @@
 ﻿#include <iostream>
 
-struct BankAccount
+class BankAccount
 {
+public:
 	double balance;
 	std::string owner;
 	std::string currency;
+	void AccountInformation()
+	{
+		std::cout << "Informacje o koncie bankowym \n";
+		std::cout << "W³aœcicel: " << owner << "\n";
+		std::cout << "Saldo: " << balance << " " << currency << '\n';
+	}
 };
 
 void accountInformation(BankAccount& account)
@@ -14,17 +21,10 @@ void accountInformation(BankAccount& account)
 	std::cout << "Saldo: " << account.balance << " " << account.currency << '\n';
 }
 
-void depositToAccount(BankAccount& account, double amount)
+void DepositToAccount(double amount)
 {
 	if (amount >= 0)
-		account.balance = account.balance + amount;
-}
-
-void widthrawalFromAccount(BankAccount& account, double amount)
-{
-	if (amount >= 0
-		&& account.balance >= amount)
-		account.balance = account.balance - amount;
+		balance = balance + amount;
 }
 
 bool widthdrawalFromAccounts(BankAccount& account, double amount)
@@ -38,26 +38,40 @@ bool widthdrawalFromAccounts(BankAccount& account, double amount)
 	return false;
 }
 
+void widthrawalFromAccount(BankAccount& account, double amount)
+{
+	if (amount >= 0
+		&& account.balance >= amount)
+		account.balance = account.balance - amount;
+}
+
 void transferBetweenAccounts(BankAccount& sourceAccount, BankAccount& targetAccount, double amount)
 {
 	if (widthdrawalFromAccounts(sourceAccount, amount))
-		depositToAccount(targetAccount, amount);
+		targetAccount.DepositToAccount(amount);
 
 }
-
-void task4()
+int main()
 {
 	BankAccount firstAccount;
 	firstAccount.balance = 7200;
 	firstAccount.owner = "Jan Kowalski";
 	firstAccount.currency = "z³";
 
-	accountInformation(firstAccount);
+	firstAccount.AccountInformation();
 
 	BankAccount secondAccount;
 	secondAccount.balance = 3200;
 	secondAccount.owner = "Ewa Nowak";
 	secondAccount.currency = "z³";
-	depositToAccount(secondAccount, 100);
+
+	secondAccount.AccountInformation();
+
+	
+	firstAccount.AccountInformation();
+
 	accountInformation(secondAccount);
+	firstAccount.AccountInformation();
 }
+
+
