@@ -1,12 +1,10 @@
-//FirstStructConsoleApplication.cpp
+// FirstStructConsoleApplication.cpp 
 
 #include <iostream>
-#include "Task.h"
-
+#include "Tasks.h"
 
 int main()
 {
     setlocale(LC_CTYPE, "polish");
     task4();
 }
-

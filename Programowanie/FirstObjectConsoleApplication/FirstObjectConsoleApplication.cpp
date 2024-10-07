@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿// FirstObjectConsoleApplication.cpp 
+
+#include <iostream>
 
 class BankAccount
 {
@@ -6,51 +8,40 @@ public:
 	double balance;
 	std::string owner;
 	std::string currency;
+
 	void AccountInformation()
 	{
-		std::cout << "Informacje o koncie bankowym \n";
-		std::cout << "W³aœcicel: " << owner << "\n";
-		std::cout << "Saldo: " << balance << " " << currency << '\n';
+		std::cout << "Informacja o koncie bankowym\n";
+		std::cout << "W³aœciciel: " << owner << "\n";
+		std::cout << "Saldo: " << balance << " " << currency << "\n";
+	}
+
+	void DepositToAccount(double amount)
+	{
+		if (amount >= 0)
+			balance = balance + amount;
+	}
+
+	bool WidthdrawalFromAccount(double amount)
+	{
+		if (amount >= 0
+			&& balance >= amount)
+		{
+			balance = balance - amount;
+			return true;
+		}
+
+		return false;
 	}
 };
 
-void accountInformation(BankAccount& account)
+void transferBetweenAccounts(BankAccount& sourceAccount, BankAccount& targetAcccount, double amount)
 {
-	std::cout << "Informacje o koncie bankowym \n";
-	std::cout << "W³aœcicel: " << account.owner << "\n";
-	std::cout << "Saldo: " << account.balance << " " << account.currency << '\n';
-}
-
-void DepositToAccount(double amount)
-{
-	if (amount >= 0)
-		balance = balance + amount;
-}
-
-bool widthdrawalFromAccounts(BankAccount& account, double amount)
-{
-	if (amount >= 0
-		&& account.balance >= amount)
-	{
-		account.balance = account.balance - amount;
-		return true;
-	}
-	return false;
-}
-
-void widthrawalFromAccount(BankAccount& account, double amount)
-{
-	if (amount >= 0
-		&& account.balance >= amount)
-		account.balance = account.balance - amount;
-}
-
-void transferBetweenAccounts(BankAccount& sourceAccount, BankAccount& targetAccount, double amount)
-{
-	if (widthdrawalFromAccounts(sourceAccount, amount))
-		targetAccount.DepositToAccount(amount);
+	if (sourceAccount.WidthdrawalFromAccount(amount))
+		targetAcccount.DepositToAccount(amount);
 
 }
+
 int main()
 {
 	BankAccount firstAccount;
@@ -60,6 +51,8 @@ int main()
 
 	firstAccount.AccountInformation();
 
+	//accountInformation(firstAccount);
+
 	BankAccount secondAccount;
 	secondAccount.balance = 3200;
 	secondAccount.owner = "Ewa Nowak";
@@ -67,11 +60,17 @@ int main()
 
 	secondAccount.AccountInformation();
 
-	
+	firstAccount.DepositToAccount(100);
 	firstAccount.AccountInformation();
 
-	accountInformation(secondAccount);
+	firstAccount.WidthdrawalFromAccount(200);
 	firstAccount.AccountInformation();
+	secondAccount.AccountInformation();
+
+	transferBetweenAccounts(firstAccount, secondAccount, 8100);
+
+	firstAccount.AccountInformation();
+	secondAccount.AccountInformation();
+
 }
-
 
