@@ -2,6 +2,10 @@
 
 class SavingBankAccount : public BankAccount
 {
+
+protected:
+	double interestRate;
+
 public:
 	double interestRate;
 
