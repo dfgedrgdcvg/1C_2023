@@ -7,10 +7,10 @@
 
 int main()
 {
-    std::ifstream file("przyklad.txt");
+	std::ifstream file("przyklad.txt");
 	/*
 
-    int numbers[200];
+	int numbers[200];
 
 	for (int i = 0; i < 200; i++)
 	{
@@ -39,10 +39,29 @@ int main()
 	*/
 
 	std::cout << "Odczytane liczby: \n";
-	for (int num : numbers) 
+	for (int num : numbers)
 	{
 		std::cout << num << ", ";
 	}
 	std::cout << "\n";
-}
 
+
+	std::cout << "zadanie 4.1 \n";
+	int count = 0;
+	for (int num : numbers)
+	{
+		int firstDigit;
+		int lastDigit = num % 10;
+		int tmpNum = num;
+
+		do
+		{
+			firstDigit = tmpNum % 10;
+			tmpNum = tmpNum / 10;
+		} while (tmpNum != 0);
+		if (firstDigit == lastDigit)
+		{
+			count++;
+		}
+	}std::cout << "Ilosc: " << count;
+}
