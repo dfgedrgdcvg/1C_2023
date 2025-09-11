@@ -34,3 +34,20 @@ Console.WriteLine($"przed {firstNumber}");
 ParametrTest_v1(firstNumber);
 Console.WriteLine($"po {firstNumber}");
 //Parametr_v1(99);
+
+
+//przekazywanie przez referencje 
+
+
+void ParametrTest_v2(ref int p)
+{
+    Console.WriteLine("Parametr w ParamertTest_v2 {p}");
+    p++;
+    Console.WriteLine($"Parametr w ParametrTest_v2 {p}");
+}
+
+firstNumber = 15;
+Console.WriteLine($"przed {firstNumber}");
+ParametrTest_v2(ref firstNumber);
+Console.WriteLine($"po {firstNumber}");
+//Parametr_v1(99);
