@@ -51,3 +51,24 @@ Console.WriteLine($"przed {firstNumber}");
 ParametrTest_v2(ref firstNumber);
 Console.WriteLine($"po {firstNumber}");
 //Parametr_v1(99);
+
+void ParametrTest_v3(out int p)
+{
+    //Console.WriteLine("Parametr w ParamertTest_v3 {p}");
+    p = 19;
+    Console.WriteLine("Parametr w ParamertTest_v3 {p}");
+}
+    int thirdNumber;
+ParametrTest_v3(out thirdNumber);
+Console.WriteLine($"thirdnumber po {thirdNumber}");
+//ParametrTest_v3(out 99); //BŁĄD
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+string firstStrNumber = "15";
+
+int firstConvertNumber = int.Parse(firstStrNumber);
+Console.WriteLine($"Po konwersji {firstConvertNumber}");
+
+if (int.TryParse(firstStrNumber, out int secondConvertNumber))
+    Console.WriteLine($"Udało sie skonwertować {secondConvertNumber}");
