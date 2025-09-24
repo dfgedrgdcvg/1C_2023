@@ -9,6 +9,5 @@ secondPoint = new (2, 3);
 
 firstPoint.Show();
 
-
 firstPoint.SetX(99);
 

@@ -26,5 +26,8 @@ namespace AboutObjectConsoleApp1
         {
             Console.WriteLine($"({x},{y}");
         }
+
+        public int GetX()
+            { return x; }
     }
 }
