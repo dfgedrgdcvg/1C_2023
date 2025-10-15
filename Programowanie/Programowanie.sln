@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutObjectConsoleApp1", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorsConsoleApp", "ErrorsConsoleApp\ErrorsConsoleApp.csproj", "{8C2B1BB2-2995-4878-B7B0-7083702898B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTasksConsoleApp", "PracticalTasksConsoleApp\PracticalTasksConsoleApp.csproj", "{54DA0D20-2233-490A-A140-1C36CCAD9EC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -431,6 +433,18 @@ Global
 		{8C2B1BB2-2995-4878-B7B0-7083702898B7}.Release|x64.Build.0 = Release|Any CPU
 		{8C2B1BB2-2995-4878-B7B0-7083702898B7}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C2B1BB2-2995-4878-B7B0-7083702898B7}.Release|x86.Build.0 = Release|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Debug|x64.Build.0 = Debug|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Debug|x86.Build.0 = Debug|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Release|x64.ActiveCfg = Release|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Release|x64.Build.0 = Release|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Release|x86.ActiveCfg = Release|Any CPU
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -472,6 +486,7 @@ Global
 		{35C01F2C-66EA-4007-B0A3-1ECD2A102C4E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{CFF4101E-4F71-474C-AEB6-3A487C54FCDE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{8C2B1BB2-2995-4878-B7B0-7083702898B7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{54DA0D20-2233-490A-A140-1C36CCAD9EC3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC52CA19-2E71-4B24-A22D-395CD0BC76FD}
