@@ -11,13 +11,7 @@ namespace PracticalTasksConsoleApp.Styczeń2023_1
     {
         public void Task()
         {
-            Console.WriteLine("Podaj pierwsza liczbę całkowitą: ");
-            int a = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Podaj drugą liczbę całkowitą: ");
-            int b = int.Parse(Console.ReadLine());
-
-            Console.WriteLine($"Najwiekszy wpolny dzielnik (NWD) to: "
+            
         }
     }
 }
