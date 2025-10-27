@@ -1,36 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalTasksConsoleApp.Styczeń2023_1
+namespace ParticalTasksConsoleApp.Styczen2023_1
 {
     internal class Task1
     {
-        static void NWD(int a, int b)
+        public static void Task_1()
         {
-            while (a != b)
+            int x, y;
+
+            Console.Write("Podaj a: ");
+            x = int.Parse(Console.ReadLine());
+            Console.Write("Podaj b: ");
+            y = int.Parse(Console.ReadLine());
+
+            if (x <= 0)
             {
-                if (a > b)
-                    a = a - b;
-                else
-                    b = b - a;
+                Console.WriteLine("x musi być większe od zera");
+                return;
             }
-            Console.WriteLine("NWD = " + a);
+            if (y <= 0)
+            {
+                Console.WriteLine("y musi być większe od zera");
+                return;
+            }
+
+            int result = NWD(x, y);
+            Console.WriteLine("NWD = " + result);
         }
-        static void Main()
+
+        public static int NWD(int x, int y)
         {
-            Console.WriteLine("Podaj pierwszą liczbe");
-            int a = int.Parse(Console.ReadLine());
-            if (a < 0)
-                a = a * (-1);
-            Console.WriteLine("Podaj pierwszą liczbe");
-            int b = int.Parse(Console.ReadLine());
-            if (b < 0)
-                b = b * (-1);
-            NWD(a , b);
+            while (x != y)
+            {
+                if (x > y)
+                    x = x - y;
+                else
+                    y = y - x;
+
+
+
+
+
+
+            }
+            return x;
         }
     }
 }
