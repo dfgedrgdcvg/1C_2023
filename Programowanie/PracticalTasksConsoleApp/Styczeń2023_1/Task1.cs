@@ -41,12 +41,6 @@ namespace ParticalTasksConsoleApp.Styczen2023_1
                     x = x - y;
                 else
                     y = y - x;
-
-
-
-
-
-
             }
             return x;
         }
