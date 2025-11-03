@@ -11,38 +11,38 @@ namespace ParticalTasksConsoleApp.Styczen2023_1
     {
         public static void Task_1()
         {
-            int x, y;
+            int a, b;
 
             Console.Write("Podaj a: ");
-            x = int.Parse(Console.ReadLine());
+            a = int.Parse(Console.ReadLine());
             Console.Write("Podaj b: ");
-            y = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
 
-            if (x <= 0)
+            if (a <= 0)
             {
-                Console.WriteLine("x musi być większe od zera");
+                Console.WriteLine("a musi być większe od zera");
                 return;
             }
-            if (y <= 0)
+            if (b <= 0)
             {
-                Console.WriteLine("y musi być większe od zera");
+                Console.WriteLine("b musi być większe od zera");
                 return;
             }
 
-            int result = NWD(x, y);
+            int result = NWD(a, b);
             Console.WriteLine("NWD = " + result);
         }
 
-        public static int NWD(int x, int y)
+        public static int NWD(int a, int b)
         {
-            while (x != y)
+            while (a != b)
             {
-                if (x > y)
-                    x = x - y;
+                if (a > b)
+                    a = a - b;
                 else
-                    y = y - x;
+                    b = b - a;
             }
-            return x;
+            return a ;
         }
     }
 }
