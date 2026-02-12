@@ -102,8 +102,48 @@ internal class Task1
         Print("Zadanie 3", q3);
 
         // Zadanie 4
-        //var q4 = people.OrderByDescending(p => p.Age >= 18);
-        //Print("Zadanie 1", q4);
+        var q4 = people.OrderByDescending(p => p.LastName);
+        Print("Zadanie 4", q4);
+
+        //Zadanie 5
+        var q5 = people.Select(p => p.FirstName + " " + p.LastName);
+        Print("Zadanie 5", q5);
+
+        //Zadanie 6
+        var q6 = people.Select(p => p.City).Distinct();
+        Print("Zadanie 6", q6);
+
+        //Zadanie 7
+        var q7 = people.Count(p => p.City == "Warszawa");
+        Console.WriteLine($"\n=== Zadanie 7 ===\n{q7}");
+
+        //Zadanie 8
+        var q8 = people.Average(p => p.Salary);
+        Console.WriteLine($"\n=== Zadanie 8 ===\n{q8}");
+
+        //Zadanie 9
+        var q9 = people.OrderBy(p => p.Age);
+        Console.WriteLine("Zadanie 9", new[] { q9 });
+
+        //Zadanie 10
+        var q10 = people.Any(p => p.City == "Gdańsk");
+        Console.WriteLine($"\n=== Zadanie 10 ===\n{q10}");
+
+        //Zadanie 11
+        var q11 = people
+            .OrderBy(p => p.City)
+            .ThenByDescending(p => p.Salary);
+        Print("Zadanie 11", q11);
+
+        //Zadanie 12
+        var q12 = people.Where(p => p.Age >= 25 && p.Age <= 35);
+        Print("Zadanie 12", q12);
+
+        //Zadanie 13
+        var q13 = people
+            .Where(p => p.City == "Kielce")
+            .Sum(p => p.Salary);
+        Console.WriteLine($"\n=== Zadanie 13 ===\n{q13}");
 
 
     }
