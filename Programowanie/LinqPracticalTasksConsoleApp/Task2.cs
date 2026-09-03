@@ -14,7 +14,7 @@ namespace LinqPracticalTasksConsoleApp
                 Console.WriteLine(item);
             }
         }
-
+        //
         private void PrintValue<T>(string title, T value)
         {
             Console.WriteLine($"\n{title}");
