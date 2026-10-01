@@ -8,26 +8,93 @@
     <ScrollView>
         <StackLayout Spacing="10">
             <StackLayout Orientation="Horizontal">
-                <Label Text="imie i nazwisko" />
-                <Entry Text="{Binding fullName}"
-                       Placeholder="wpisz imie i nazwisko" />
+                <Label Text="Imię i nazwisko" />
+                <Entry Text="{Binding FullName}"
+                       Placeholder="wpisz imie i nazwisko"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Label Text="adres e-mail" />
+                <Label Text="Adres e-mail" />
                 <Entry Text="{Binding Email}"
                        Keyboard="Email"
-                       Placeholder="wpisz adres email"
+                       Placeholder="wpisz adres e-mail"/>
             </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Data przyjazdu"/>
-                        <DatePicker Date="{Binding ArrivalDate}"
-                                    MinimumDate="{Binding MinimumDate}"/>
-                    </StackLayout>
-                
-                
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Data przyjazdu" />
+                <DatePicker Date="{Binding ArrivalDate}"
+                            MinimumDate="{Binding MinimumDate}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Liczba nocy" 
+                       VerticalOptions="Center"/>
+                <Stepper 
+                    Increment="1"
+                    Minimum="1"
+                    Maximum="14"
+                    Value="{Binding Nights}"/>
+
+                <Label Text="{Binding Nights}"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Liczba osób" />
+                <Stepper 
+                    Increment="1"
+                    Minimum="1"
+                    Maximum="4"
+                    Value="{Binding Persons}"/>
+
+                <Label Text="{Binding Persons}"
+                       VerticalOptions="Center"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Rodzaj pokoju:"/>
+                <Picker
+                    ItemsSource="{Binding RoomCollection}"
+                    SelectedItem="{Binding SelectedRoom}"
+                    />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Śnadanie:"/>
+                <Switch IsToggled="{Binding Breakfast}"/>
+                <Label Text="{Binding Breakfast}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Miejsce parkingowe:"/>
+                <CheckBox IsChecked="{Binding Parking}"/>
+                <Label Text="{Binding Parking}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Rabat"/>
+                <Slider
+                    Minimum="0"
+                    Maximum="20"
+                    Value="{Binding Discount}"
+                    WidthRequest="200"
+                    />
+                <Label Text="{Binding Discount}"
+                       VerticalOptions="Center"/>
+                <Label Text="%"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+
+            <Button Command="{Binding CalculateReservation}"
+                    Text="Oblicz koszt"
+                    />
+
+            <Label Text="Podsumowanie:"/>
+            <Label Text="{Binding Summary}"/>
         </StackLayout>
     </ScrollView>
+
 
 </ContentPage>
