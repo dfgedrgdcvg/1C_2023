@@ -1,259 +1,234 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 
 namespace HotelBookingMauiApp
 {
     public partial class MainPage : ContentPage
     {
-
-
-
-        private string fullName;
-        public string FullName
+        private string clientName;
+        public string ClientName
         {
-            get { return fullName; }
+            get => clientName;
             set
             {
-                fullName = value;
+                clientName = value;
                 OnPropertyChanged();
             }
         }
 
-        private string email;
-        public string Email
+        private string userEmail;
+        public string UserEmail
         {
-            get { return email; }
+            get => userEmail;
             set
             {
-                email = value;
+                userEmail = value;
                 OnPropertyChanged();
             }
         }
 
-        private DateTime minimumDate;
-        public DateTime MinimumDate
+        private DateTime minStartDate;
+        public DateTime MinStartDate
         {
-            get { return minimumDate; }
+            get => minStartDate;
             set
             {
-                minimumDate = value;
+                minStartDate = value;
                 OnPropertyChanged();
             }
         }
 
-        private DateTime arrivalDate;
-        public DateTime ArrivalDate
+        private DateTime checkInDate;
+        public DateTime CheckInDate
         {
-            get { return arrivalDate; }
+            get => checkInDate;
             set
             {
-                arrivalDate = value;
+                checkInDate = value;
                 OnPropertyChanged();
             }
         }
 
-
-
-        private int nights;
-        public int Nights
+        private int stayDuration;
+        public int StayDuration
         {
-            get { return nights; }
+            get => stayDuration;
             set
             {
-                nights = value;
+                stayDuration = value;
                 OnPropertyChanged();
             }
         }
 
-
-        private int persons;
-        public int Persons
+        private int guestCount;
+        public int GuestCount
         {
-            get { return persons; }
+            get => guestCount;
             set
             {
-                persons = value;
+                guestCount = value;
                 OnPropertyChanged();
             }
         }
 
-        public string[]
-            RoomCollection
-        { get; set; }
+        public string[] AvailableRooms { get; set; }
 
-        private string selectedRoom;
-        public string SelectedRoom
+        private string chosenRoom;
+        public string ChosenRoom
         {
-            get { return selectedRoom; }
+            get => chosenRoom;
             set
             {
-                selectedRoom = value;
+                chosenRoom = value;
                 OnPropertyChanged();
             }
         }
 
-        private bool breakfast;
-        public bool Breakfast
+        private bool hasBreakfast;
+        public bool HasBreakfast
         {
-            get { return breakfast; }
+            get => hasBreakfast;
             set
             {
-                breakfast = value;
+                hasBreakfast = value;
                 OnPropertyChanged();
             }
         }
 
-
-        private bool parking;
-        public bool Parking
+        private bool needsParking;
+        public bool NeedsParking
         {
-            get { return parking; }
+            get => needsParking;
             set
             {
-                parking = value;
+                needsParking = value;
                 OnPropertyChanged();
             }
         }
 
-        private double discount;
-        public double Discount
+        private double discountValue;
+        public double DiscountValue
         {
-            get { return discount; }
+            get => discountValue;
             set
             {
-                discount = value;
+                discountValue = value;
                 OnPropertyChanged();
             }
         }
 
-
-        private string summary;
-        public string Summary
+        private string reservationDetails;
+        public string ReservationDetails
         {
-            get { return summary; }
+            get => reservationDetails;
             set
             {
-                summary = value;
+                reservationDetails = value;
                 OnPropertyChanged();
             }
         }
 
-        private Command calculateReservation;
-        public Command CalculateReservation
-        {
-            get
-            {
-                if (calculateReservation == null)
-                {
-                    calculateReservation = new Command(() => { CalculateCost(); });
-                }
-                return calculateReservation;
-            }
-        }
+        private Command computeTotalCostCommand;
+        public Command ComputeTotalCostCommand => computeTotalCostCommand ??= new Command(CalculateCost);
 
         public MainPage()
         {
-            MinimumDate = DateTime.Today;
-            ArrivalDate = DateTime.Today;
-            Nights = 1;
-            Persons = 1;
-            Breakfast = false;
-            Parking = false;
-            Discount = 0;
-            RoomCollection = new string[]
+            MinStartDate = DateTime.Today;
+            CheckInDate = DateTime.Today;
+            StayDuration = 1;
+            GuestCount = 1;
+            HasBreakfast = false;
+            NeedsParking = false;
+            DiscountValue = 0;
+            
+            AvailableRooms = new string[]
             {
-            "Pokój jednoosbowy",
-            "Pokój dwuosobowy",
-            "Apartament"
+                "Pokój jednoosobowy",
+                "Pokój dwuosobowy",
+                "Apartament"
             };
 
             InitializeComponent();
         }
 
-        void CalculateCost()
+        private void CalculateCost()
         {
-            if (string.IsNullOrWhiteSpace(FullName))
+            if (string.IsNullOrWhiteSpace(ClientName))
             {
-                Summary = "Błąd podaj imie lub nazwisko";
+                ReservationDetails = "Błąd: podaj imię lub nazwisko";
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(SelectedRoom))
+            if (string.IsNullOrWhiteSpace(UserEmail))
             {
-                Summary = "Błąd wybierz rodzaj pokoju";
+                ReservationDetails = "Uzupełnij adres email";
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(Email))
+            if (!UserEmail.Contains(".") || !UserEmail.Contains("@"))
             {
-                Summary = "Uzupełnij adres email";
+                ReservationDetails = "Podałeś niepoprawny adres Email";
                 return;
             }
 
-            if (!Email.Contains(".") || !Email.Contains("@"))
+            if (string.IsNullOrWhiteSpace(ChosenRoom))
             {
-                Summary = "Podałeś niepoprawny adres Email";
+                ReservationDetails = "Błąd: wybierz rodzaj pokoju";
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(SelectedRoom))
+            if (CheckInDate < DateTime.Today)
             {
-                Summary = "Wybierz rodzaj pokoju";
+                ReservationDetails = "Błąd: data przyjazdu nie może być wcześniejsza niż dzisiaj";
                 return;
             }
-
-            if (ArrivalDate < DateTime.Today)
-            {
-                Summary = "Błąd data przyjazdu nie może być wcześniejsza niż dzisiaj";
-                return;
-            }
-
 
             double roomPrice = 0;
 
-            switch (SelectedRoom)
+            switch (ChosenRoom)
             {
                 case "Pokój jednoosobowy":
-                    roomPrice = 200; break;
+                    roomPrice = 200;
+                    break;
                 case "Pokój dwuosobowy":
-                    roomPrice = 300; break;
+                    roomPrice = 300;
+                    break;
                 case "Apartament":
-                    roomPrice = 500; break;
+                    roomPrice = 500;
+                    break;
             }
 
-            double roomCost = Nights * Persons;
+            double roomCost = StayDuration * roomPrice;
             double breakfastCost = 0;
 
-            if (Breakfast)
+            if (HasBreakfast)
             {
-                breakfastCost = Nights * Persons * 40;
+                breakfastCost = StayDuration * GuestCount * 40;
             }
 
             double parkingCost = 0;
-            if (Parking)
+            if (NeedsParking)
             {
-                parkingCost = Nights * 30;
+                parkingCost = StayDuration * 30;
             }
 
             double totalBeforeDiscount = roomCost + breakfastCost + parkingCost;
-            double discountAmount = totalBeforeDiscount * Discount / 100;
+            double discountAmount = totalBeforeDiscount * DiscountValue / 100;
             double totalCost = totalBeforeDiscount - discountAmount;
 
-
-            Summary = $"Imię i nazwisko: {FullName}\n" +
-                $"Data przyjazdu: {ArrivalDate}\n" +
-                $"Liczba nocy: {Nights} \n" +
-                $"Liczba osób: {Persons} \n" +
-                $"Pokój: {SelectedRoom} \n" +
-                $"Śniadanie: {(Breakfast ? "TAK" : "NIE")} \n" +
-                $"Parking: {(Parking ? "TAK" : "NIE")} \n" +
-                $"Rabat: {Discount}% \n" +
-                $"Koszt pokoju: {Nights} x {roomPrice}zł = {roomCost}zł \n" +
-                $"Śniadanie: {Nights} x {Persons} x 40zł = {breakfastCost}zł\n" +
-                $"Parking: {Nights} x 30zł = {parkingCost}zł\n" +
-                $"Cena przed rabatem: {totalBeforeDiscount}zł \n" +
-                $"Rabat: {discountAmount:F2}zł \n" +
+            ReservationDetails = $"Imię i nazwisko: {ClientName}\n" +
+                $"Data przyjazdu: {CheckInDate:dd.MM.yyyy}\n" +
+                $"Liczba nocy: {StayDuration}\n" +
+                $"Liczba osób: {GuestCount}\n" +
+                $"Pokój: {ChosenRoom}\n" +
+                $"Śniadanie: {(HasBreakfast ? "TAK" : "NIE")}\n" +
+                $"Parking: {(NeedsParking ? "TAK" : "NIE")}\n" +
+                $"Rabat: {DiscountValue}%\n" +
+                $"Koszt pokoju: {StayDuration} x {roomPrice}zł = {roomCost}zł\n" +
+                $"Śniadanie: {StayDuration} x {GuestCount} x 40zł = {breakfastCost}zł\n" +
+                $"Parking: {StayDuration} x 30zł = {parkingCost}zł\n" +
+                $"Cena przed rabatem: {totalBeforeDiscount}zł\n" +
+                $"Rabat: {discountAmount:F2}zł\n" +
                 $"Łączny koszt: {totalCost:F2}zł\n";
         }
-
     }
 }
