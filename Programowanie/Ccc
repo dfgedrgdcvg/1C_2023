@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrderCostCalculatorMauiApp.MainPage"
+             x:Name="rootPage"
+             BindingContext="{x:Reference rootPage}">
+
+    <ScrollView>
+        <StackLayout Spacing="12" Background="White">
+            <Label Text="Kalkulator kosztu zamowień" 
+                   FontSize="22" 
+                   HorizontalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Cena za sztuke" VerticalOptions="Center"/>
+                <Entry Text="{Binding ItemPrice}"
+                       Placeholder="Cena za sztuke"
+                       Keyboard="Numeric"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" Spacing="12" >
+                <Label Text="Nazwa produktu" VerticalOptions="Center"/>
+                <Entry Text="{Binding ItemTitle}"
+                       Placeholder="Nazwa produktu"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Sposób dostawy:" VerticalOptions="Center"/>
+                <Picker ItemsSource="{Binding ShippingOptions}"
+                        SelectedItem="{Binding ChosenShipping}"
+                        WidthRequest="190"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Liczba sztuk" 
+                       VerticalOptions="Center"/>
+                <Stepper Increment="1"
+                         Minimum="1"
+                         Maximum="10"
+                         Value="{Binding Amount}"/>
+                <Label Text="{Binding Amount}"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Dostawa ekspresowa:" VerticalOptions="Center"/>
+                <Switch IsToggled="{Binding IsExpress}"/>
+                <Label Text="{Binding IsExpress}" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <Button Command="{Binding ComputeCommand}"
+                    Text="Oblicz "/>
+
+            <Label Text="Podsumowanie:"/>
+            <Label Text="{Binding ResultDetails}"/>
+            
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
+
+
+
+
+
+namespace OrderCostCalculatorMauiApp
+{
+    public partial class MainPage : ContentPage
+    {
+        private string itemTitle;
+        public string ItemTitle
+        {
+            get { return itemTitle; }
+            set
+            {
+                itemTitle = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int itemPrice;
+        public int ItemPrice
+        {
+            get { return itemPrice; }
+            set
+            {
+                itemPrice = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int amount;
+        public int Amount
+        {
+            get { return amount; }
+            set
+            {
+                amount = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool isExpress;
+        public bool IsExpress
+        {
+            get { return isExpress; }
+            set
+            {
+                isExpress = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string resultDetails;
+        public string ResultDetails
+        {
+            get { return resultDetails; }
+            set
+            {
+                resultDetails = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string chosenShipping;
+        public string ChosenShipping
+        {
+            get { return chosenShipping; }
+            set
+            {
+                chosenShipping = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Command computeCommand;
+        public Command ComputeCommand
+        {
+            get
+            {
+                if (computeCommand == null)
+                {
+                    computeCommand = new Command(() => { PerformCalculation(); });
+                }
+                return computeCommand;
+            }
+        }
+
+        public string[] ShippingOptions { get; set; }
+
+        public MainPage()
+        {
+            Amount = 1;
+            IsExpress = false;
+            ShippingOptions = new string[]
+            {
+                "Odbiór osobisty",
+                "Kurier",
+                "Paczkomat"
+            };
+            InitializeComponent();
+        }
+
+        void PerformCalculation()
+        {
+            double deliveryCost = 0;
+
+            switch (ChosenShipping)
+            {
+                case "Odbiór osobisty":
+                    deliveryCost = 0; 
+                    break;
+                case "Kurier":
+                    deliveryCost = 12; 
+                    break;
+                case "Paczkomat":
+                    deliveryCost = 10; 
+                    break;
+            }
+
+            double grandTotal = ItemPrice * Amount + deliveryCost;
+
+            if (IsExpress)
+            {
+                grandTotal += 15;
+            }
+
+            ResultDetails =
+            $"Produkt: {ItemTitle}\n" +
+            $"Cena za sztukę: {ItemPrice}zł \n" +
+            $"Liczba sztuk: {Amount} \n" +
+            $"Dostawa ekspresowa: {(IsExpress ? "TAK" : "NIE")} \n" +
+            $"Sposób dostawy: {ChosenShipping} \n" +  
+            $"Koszt dostawy: {deliveryCost}zł \n" +
+            $"Wynik: {grandTotal}zł \n";
+        }
+    }
+}
+
