@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrderCostCalculatorMauiApp.MainPage"
+             x:Name="rootPage"
+             BindingContext="{x:Reference rootPage}">
+
+    <ScrollView>
+        <StackLayout Spacing="12">
+            <Label Text="Kalkulator kosztu zamowień" 
+                   FontSize="22" 
+                   HorizontalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Cena za sztuke" VerticalOptions="Center"/>
+                <Entry Text="{Binding ItemPrice}"
+                       Placeholder="Cena za sztuke"
+                       Keyboard="Numeric"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12" >
+                <Label Text="Nazwa produktu" VerticalOptions="Center"/>
+                <Entry Text="{Binding ItemTitle}"
+                       Placeholder="Nazwa produktu"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Sposób dostawy:" VerticalOptions="Center"/>
+                <Picker ItemsSource="{Binding ShippingOptions}"
+                        SelectedItem="{Binding ChosenShipping}"
+                        WidthRequest="190"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Liczba sztuk" 
+                       VerticalOptions="Center"/>
+                <Stepper Increment="1"
+                         Minimum="1"
+                         Maximum="10"
+                         Value="{Binding Amount}"/>
+                <Label Text="{Binding Amount}"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="12">
+                <Label Text="Dostawa ekspresowa:" VerticalOptions="Center"/>
+                <Switch IsToggled="{Binding IsExpress}"/>
+                <Label Text="{Binding IsExpress}" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <Button Command="{Binding ComputeCommand}"
+                    Text="Oblicz "/>
+
+            <Label Text="Podsumowanie:"/>
+            <Label Text="{Binding ResultDetails}"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
