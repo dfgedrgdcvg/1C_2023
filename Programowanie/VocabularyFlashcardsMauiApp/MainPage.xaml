@@ -6,7 +6,7 @@
              BindingContext="{x:Reference thisPage}">
 
     <ScrollView>
-        <StackLayout Spacing="15" Background="White" Padding="20">
+        <StackLayout Spacing="15" Padding="20">
             <Label Text="Fiszki do nauki słówek" 
                    FontSize="22" 
                    HorizontalOptions="Center"/>

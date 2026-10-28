@@ -6,7 +6,7 @@
              BindingContext="{x:Reference thisPage}">
 
     <ScrollView>
-        <StackLayout Spacing="12" Background="White" Padding="20">
+        <StackLayout Spacing="12" Padding="20">
             <Label Text="Wypożyczalnia sprzętu sportowego" 
                    FontSize="22" 
                    HorizontalOptions="Center"/>
